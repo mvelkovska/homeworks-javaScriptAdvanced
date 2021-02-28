@@ -52,15 +52,15 @@ console.log(femaleStudents4);
 
 console.log("=====================");
 
-let maleStud = students.filter(n => n.gender === "Male" && n.avgGrade > 2 && n.name.startsWith("B")).map(n => `${n.name} - ${n.avgGrade} - ${n.gender}`)
+let maleStud = students.filter(n => n.gender === "Male" && n.avgGrade > 2 && n.name.startsWith("B")).map(n => `${n.name} ${n.surname} - ${n.avgGrade} - ${n.gender}`);
 console.log(maleStud);
 
-function loadScript(url) {
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-    head.appendChild(script);
-}
+// function loadScript(url) {
+//     var head = document.getElementsByTagName('head')[0];
+//     var script = document.createElement('script');
+//     script.type = 'text/javascript';
+//     script.src = url;
+//     head.appendChild(script);
+// }
 
 
