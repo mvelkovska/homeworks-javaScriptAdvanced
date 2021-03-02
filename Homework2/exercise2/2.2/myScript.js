@@ -29,7 +29,7 @@ $(document).ready(function () {
   </tr>`);
 
                     for (let i = 0; i <= 9; i++) {
-                        myTable.append(
+                        t.append(
                             `<tr>
                             <th scope="row">${i + 1}</th>
                             <td>${response.results[i].name}</td>
