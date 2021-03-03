@@ -43,13 +43,14 @@ $(document).ready(function () {
 
                 if (p === null) { //prva
 
-                    //  myTable.append(" ");
+
                     nextButton.show();
+                    prevButton.hide();
                     printEverything(myTable);
                 }
 
                 if (n && p) {  //megjustrani(2,3,4,5)vo slucajov
-                    // myTable.append(" ");
+
                     nextButton.show();
                     prevButton.show();
                     printEverything(myTable);
@@ -70,30 +71,32 @@ $(document).ready(function () {
         });
     }
 
-    function getNumber(i) {                               //ovaa funkcija go vrakja brojcheto od url-to
-        let stringLength = i.length;
-        let numberFromUrl = i.charAt(stringLength - 1);
-        let parsedUrl = Number(numberFromUrl);
-        return parsedUrl;
-    }
+    // function getNumber(i) {     //ovaa funkcija go vrakja brojcheto od url-to,otposle sfativ deka ne mi e potrebna 
+    //     let stringLength = i.length; //mozebi bi bila korisna koga bi se iskoristilo pagination
+    //     let numberFromUrl = i.charAt(stringLength - 1);
+    //     let parsedUrl = Number(numberFromUrl);
+    //     return parsedUrl;
+    // }
 
     myButton.click(() => { //inicijalno pri klik na kopcheto click me da se pojavat prvite 10
         mainFunction(`https://swapi.dev/api/planets/?page=1`);
     });
 
-    nextButton.click(() => {
-        myTable.text(" ");
-        let parsedUrl = getNumber(n);
-        console.log(parsedUrl);
-        mainFunction(`https://swapi.dev/api/planets/?page=${parsedUrl}`);
-    });
-
     prevButton.click(() => {
         myTable.text(" ");
-        let parsedUrl = getNumber(p);
-        console.log(parsedUrl);
-        mainFunction(`https://swapi.dev/api/planets/?page=${parsedUrl}`);
+        // let parsedUrl = getNumber(p); 
+        // console.log(parsedUrl);
+        // mainFunction(`https://swapi.dev/api/planets/?page=${parsedUrl}`);
+        mainFunction(p);
     });
 
+
+    nextButton.click(() => {
+        myTable.text(" ");
+        // let parsedUrl = getNumber(n);
+        // console.log(parsedUrl);
+        // mainFunction(`https://swapi.dev/api/planets/?page=${parsedUrl}`);
+        mainFunction(n);
+    });
 });
 
