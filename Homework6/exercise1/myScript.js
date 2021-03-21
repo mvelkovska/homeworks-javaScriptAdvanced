@@ -75,35 +75,11 @@ function Author(firstName, lastName, yearBirth) {
 let library1 = new Library("library1", [], "address1"); //the empty array is books
 let library2 = new Library("library2", [], "address2"); //the empty array is books
 
-console.log(`FIRST LIBRARY AT THE BEGINNING`);
-console.log(library1);
-
-console.log(`============================`);
-
-console.log(`SECOND LIBRARY AT THE BEGINNING`);
-console.log(library2);
-
-console.log(`============================`);
-
 let author1 = new Author("name1", "surname1", 1995);
-
-
-console.log(`FIRST AUTHOR AT THE BEGINNING`);
-console.log(author1);
-
-console.log(`============================`);
 
 let book1 = new Book("title1", "genre1", [], [author1]); //one book can be written by only one author
 let book2 = new Book("title2", "genre2", [], [author1]); //the empty array is libraries
 //the same author wrote the both books in this case
-
-console.log(`FIRST BOOK AT THE BEGINNING:`);
-console.log(book1);
-
-console.log(`============================`);
-
-console.log(`SECOND BOOK AT THE BEGINNING:`);
-console.log(book2);
 
 
 book1.addLibrary(library1);
