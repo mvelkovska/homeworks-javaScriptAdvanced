@@ -75,7 +75,9 @@ function Author(firstName, lastName, yearBirth) {
 let library1 = new Library("library1", [], "address1"); //the empty array is books
 let library2 = new Library("library2", [], "address2"); //the empty array is books
 
+
 let author1 = new Author("name1", "surname1", 1995);
+
 
 let book1 = new Book("title1", "genre1", [], [author1]); //one book can be written by only one author
 let book2 = new Book("title2", "genre2", [], [author1]); //the empty array is libraries
