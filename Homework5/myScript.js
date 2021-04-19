@@ -5,6 +5,9 @@ async function printing() {
     let information1 = await response1.json();
 
 
+
+
+
     console.log(`Information for Estonia:`);
     console.log(information1[0].name);
     console.log(information1[0].capital);

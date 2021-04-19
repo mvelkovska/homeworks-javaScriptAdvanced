@@ -4,7 +4,6 @@ function Product(name, category, hasDiscount, price) {
     this.hasDiscount = hasDiscount;
     this.price = price;
 }
-
 let products =
     [new Product("name1", "food", true, 56),
     new Product("Aaa", "category1", false, 120),
