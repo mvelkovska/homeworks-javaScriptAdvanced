@@ -4,7 +4,9 @@ function Library(name, BOOKS, address) {
 	this.BOOKS = BOOKS; //array of books
 	this.address = address === undefined ? "unnamedAddress" : address;
 
-	this.numberOfMembers = BOOKS.length * 15; // unsettable
+	this.numberOfMembers = BOOKS.length * 15; // unsettable!!
+
+
 
 	this.printBooks = function () {
 		if (BOOKS.length !== 0) {
